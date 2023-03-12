@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+}
+
+#stdout {
+	word-break: break-all;
+	max-height: 50vh;
+	overflow-y: scroll;
+}
+
+#stdout::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#stdout::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+#stdout::-webkit-scrollbar:vertical {
+    width: 11px;
+}
