@@ -1,2 +1,1 @@
-# client-zip-stream
-# client-zip-stream
+`node-zip-stream` ported for *Broswer*
