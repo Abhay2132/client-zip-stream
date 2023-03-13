@@ -18,7 +18,7 @@ $('input[name="input_file"]').addEventListener("change", e => {
 	stdout("<hr>")
 	let zip = new Archiver(), i = 1;
 	for(let file of e.target.files) 
-		zip.entry(file.stream(), "files/"+file.name, ()=> stdout("Entry"+ i++ +"<br>"))
+		zip.entry(file.stream(), file.name, ()=> stdout("Entry"+ i++ +"<br>"))
 	zip.finish()
 	return zip.dl();
 	let data = []
