@@ -4,7 +4,7 @@ const log = console.log
 const $ = q => document.querySelector(q);
 const wait = n => new Promise(a => setTimeout(a, n || 0));
 
-fetch("./tmp/ag.mp4")
+fetch("./tmp/file.tmp")
 .then(res => res.body)
 .then( async s => {
 	let cs = new CS();

@@ -38,7 +38,7 @@ export default class C {
 		this.write(value);
 	}
 	
-	entry(source, {name}, cb){
+	entry(source, name, cb){
 		if(this._archive.finish) return cb(new Error("Cannot add 'Entry' after calling 'finish()' method !"))
 		let entry = new Entry(source, name, cb);
 		this.entries.push(entry);
@@ -167,6 +167,12 @@ export default class C {
 			a.click()
 			setTimeout(() => URL.revokeObjectURL(href),1000);
 		})
+	}
+	
+	static textStream (str) {
+		return new ReadableStream({
+			start(c){ c.enqueue(te.encode(str)); c.close(); }
+		});
 	}
 }
 

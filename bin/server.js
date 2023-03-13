@@ -77,8 +77,6 @@ const d = {version: 0};
 let last = performance.now()
 watch([path.join(path.resolve(), "public")], () => {
 	let now  = performance.now()
-	//if(now-last < 500) return (last = performance.now())
-	//console.log("interval : %d", now-last);
 	d.version += 1
 	process.emit("refresh")
 	last = performance.now();
